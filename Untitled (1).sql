@@ -233,3 +233,9 @@ UPDATE medico SET em_atividade = 'Em atividade' WHERE id_medico = 8;
 UPDATE medico SET em_atividade = 'Em atividade' WHERE id_medico = 9;
 UPDATE medico SET em_atividade = 'Em atividade' WHERE id_medico = 10;
 ALTER TABLE medico ALTER COLUMN em_atividade SET DEFAULT 'Em atividade';
+
+ALTER TABLE medico ADD COLUMN em_atividade VARCHAR(20);
+UPDATE medico SET em_atividade = 'Inativo' WHERE id_medico = 1;
+
+UPDATE medico SET em_atividade = 'Em atividade' WHERE id_medico = 10;
+ALTER TABLE medico ALTER COLUMN em_atividade SET DEFAULT 'Em atividade';
